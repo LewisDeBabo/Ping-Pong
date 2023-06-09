@@ -37,4 +37,7 @@ public class Ball{
         bewegung.addiere(pI); 
     } 
 
+    public void Texturaendern(String pTextur){
+        kugel.setzeTextur(pTextur);
+    }
 }

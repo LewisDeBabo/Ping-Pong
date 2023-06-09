@@ -7,6 +7,11 @@ public class Ballsimulation{
     private GLTastatur tastatur;
 
     private Ball ball;
+    private Tennisball tennis;
+    private String dick;
+    private Fußball fuß;
+    private Basketball basket;
+
     private Hindernis[] hindernis;
 
     public Ballsimulation(){
@@ -23,6 +28,15 @@ public class Ballsimulation{
 
         ball = new Ball (0,200,0, 20);
         ball.werfen(new GLVektor(1,0,0));
+
+        tennis = new Tennisball (0,160,0, 20);
+        tennis.werfen(new GLVektor(1,0,0));
+
+        fuß = new Fußball (0,240,0, 20);
+        fuß.werfen(new GLVektor(1,0,0));
+
+        basket = new Basketball (0,120,0, 20);
+        basket.werfen(new GLVektor(1,0,0));
 
         fuehreAus();
     }
