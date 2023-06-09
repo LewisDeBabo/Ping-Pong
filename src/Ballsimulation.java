@@ -47,6 +47,15 @@ public class Ballsimulation{
             ball.bewegeDich();
             for (int j=0; j<2; j++)
                 ball.bearbeiteHindernis(hindernis[j]);
+            tennis.bewegeDich();
+            for (int j=0; j<2; j++)
+                tennis.bearbeiteHindernis(hindernis[j]);
+            basket.bewegeDich();
+            for (int j=0; j<2; j++)
+                basket.bearbeiteHindernis(hindernis[j]);
+            fuß.bewegeDich();
+            for (int j=0; j<2; j++)
+                fuß.bearbeiteHindernis(hindernis[j]);
 
             Sys.warte();
         }
