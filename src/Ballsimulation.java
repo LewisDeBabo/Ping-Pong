@@ -8,9 +8,9 @@ public class Ballsimulation{
 
     private Ball ball;
     private Tennisball tennis;
-    private String dick;
     private Fußball fuß;
     private Basketball basket;
+    private Baseball base;
 
     private Hindernis[] hindernis;
 
@@ -28,15 +28,26 @@ public class Ballsimulation{
 
         ball = new Ball (0,200,0, 20);
         ball.werfen(new GLVektor(1,0,0));
+        ball.Texturaendern("src/ball.jpg");
 
         tennis = new Tennisball (0,160,0, 20);
         tennis.werfen(new GLVektor(1,0,0));
+        tennis.Texturaendern("src/tennisball.jpg");
 
         fuß = new Fußball (0,240,0, 20);
         fuß.werfen(new GLVektor(1,0,0));
+        fuß.Texturaendern("src/fußball.jpg");
 
         basket = new Basketball (0,120,0, 20);
         basket.werfen(new GLVektor(1,0,0));
+        basket.Texturaendern("src/basketball.jpg");
+
+        base = new Baseball (0,80,0, 20);
+        base.werfen(new GLVektor(1,0,0));
+        base.Texturaendern("src/baseball.jpg");
+
+
+        if basket
 
         fuehreAus();
     }
@@ -56,6 +67,9 @@ public class Ballsimulation{
             fuß.bewegeDich();
             for (int j=0; j<2; j++)
                 fuß.bearbeiteHindernis(hindernis[j]);
+            base.bewegeDich();
+            for (int j=0; j<2; j++)
+                base.bearbeiteHindernis(hindernis[j]);
 
             Sys.warte();
         }
